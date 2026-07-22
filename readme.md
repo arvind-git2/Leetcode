@@ -50,7 +50,7 @@ This preserves the efficiency of binary search and achieves the required **O(log
 
 ---
 
-# 3. # 3. Code
+# 3. Code
 
 ```cpp
 #include <bits/stdc++.h>

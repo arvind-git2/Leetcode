@@ -43,12 +43,7 @@ This preserves the efficiency of binary search and achieves the required **O(log
 
 ---
 
-## Time Complexity
 
-- **Time:** `O(log n)`
-- **Space:** `O(1)`
-
----
 
 # 3. Code
 

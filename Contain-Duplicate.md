@@ -79,29 +79,37 @@ Since every distance is greater than `k`, the answer is **false**.
 ---
 
 # 3. Code
-
 ```cpp
-class Solution {
-public:
-    bool containsNearbyDuplicate(vector<int>& nums, int k) {
-        unordered_map<int, int> lastIndex;
+#include <bits/stdc++.h>
+using namespace std;
 
-        for (int i = 0; i < nums.size(); i++) {
+bool containsNearbyDuplicate(vector<int>& nums, int k) {
+    unordered_map<int, int> lastIndex;
 
-            if (lastIndex.count(nums[i]) &&
-                i - lastIndex[nums[i]] <= k) {
-                return true;
-            }
-
-            lastIndex[nums[i]] = i;
+    for (int i = 0; i < nums.size(); i++) {
+        if (lastIndex.count(nums[i]) &&
+            i - lastIndex[nums[i]] <= k) {
+            return true;
         }
 
-        return false;
+        lastIndex[nums[i]] = i;
     }
-};
-```
 
----
+    return false;
+}
+
+int main() {
+    vector<int> nums = {1, 2, 3, 1};
+    int k = 3;
+
+    if (containsNearbyDuplicate(nums, k))
+        cout << "true";
+    else
+        cout << "false";
+
+    return 0;
+}
+```
 
 ## Complexity Analysis
 
